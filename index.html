@@ -1,61 +1,92 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <script src="https://kit.fontawesome.com/4aa858a7fc.js" crossorigin="anonymous"></script>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>repl.it</title>
-    <link rel="stylesheet" href="style.css" type="text/css">
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-      }
-      .container{
-        display: flex;
-        width: 100%;
-        flex-wrap: wrap;
-    }
-
-    .split{
-        flex-basis: 45%;
-        display:flex;
-        flex-direction: column;
-        padding: 2%;
-    .split img{
-        max-width: 100%;
-    }
-    }
-    @media screen and (max-width: 576px){
-        .split{
-            flex: 1 100%;
-            flex-basis: 100%;
-            flex-grow: 0;
-        }
-    }
-    .button{
-        padding: 2%;
-        border-radius: 10px;
-        background-color: palevioletred;
-        text-align: center;
-    }
-      
-    </style>
+    <title>CofTea</title>
+    <link rel="stylesheet" href="style.css" type="text/css">  
+   
   </head>
 
   <body>
-    <section class="container">
-      <div class="split">
-        <img src="https://picsum.photos/400/400" />
-      </div>
-      <div class="split">
-        <h2>This is a pretty awesome heading</h2>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat
-          dolore iure ab veniam fugit perspiciatis dicta sapiente, eaque, velit
-          cupiditate consequuntur dolorum nobis vel. Consequatur voluptas
-          commodi omnis totam vero.
-        </p>
-        <a href="#" class="button">Let's Go!</a>
-      </div>
+    <nav>
+      <ul>
+        <li class = "active"><a href="#">CofTea</a></li>
+        <li><a href="#">About Us</a></li>
+        
+        <li class = "dropdown"> 
+          <button>Store</button>
+          <div class="dropdown-content">
+            <a href = "#">Coffee</a>
+            <a href = "#">Tea</a>
+            <a href = "#">Cake</a>
+            <a href = "#">Powder</a>
+          </div>
+        </li>
+
+        <li><a href="#">Contact Us</a></li>  
+        <li><a href="#">Others</a></li>
+        <li class = "rightnav"><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
+        <li class = "rightnav"><a href="#"><i class="fa-solid fa-user"></i></a></li>
+        <li class = "rightnav"><a href="#">Sign In/Out</a></li>
+      </ul>
+    </nav>
+
+    <section>
+      <div>
+        <div class="banner-area">
+          <h2>CofTea</h2>
+        </div>
+
+        <div class = "content-area">
+            <h2>Product</h2>
+        </div>
+        
+        <div class="container">
+          <div class="item1">
+            <h3>Coffee</h3>
+          </div>
+        
+          <div class="item2">
+            <h3>Gift Cards</h3>
+          </div>
+        
+          <div class="item3">
+            <h3>Cakes</h3>
+          </div>
+        
+          <div class="item4">
+            <h3>Powder</h3>
+          </div>
+          <div class = "item5">
+            <h3>Tea</h3>
+          </div>
     </section>
+
+    <div class = "footer-container">
+      <footer>
+        <div class = "footer-heading footer1">
+          <h2>Company Info</h2>
+          <a href = "#">About Us</a>
+          <a href = "#">Investors</a>
+          <a href = "#">Terms of service</a>
+        </div>
+        <div class = "footer-heading footer2">
+          <h2>Customer Care</h2>
+          <a href = "#">Contact Us</a>
+          <a href = "#">Websites FAQ</a>
+          <a href = "#">Feedback</a>
+        </div>
+        <div class = "footer-heading footer3">
+          <h2>Social media</h2>
+          <a href = "#">Facebook</a>
+          <a href = "#">Instagram</a>
+          <a href = "#">Twitter</a>
+        </div>
+        <div class = "footer-heading footer4">
+          <h2>Awaken Your Senses with CofTea: Where Every Sip Tells a Tale, Every Bite is Bliss!</h2>
+        </div>
+      </footer>
+    </div>
   </body>
 </html>

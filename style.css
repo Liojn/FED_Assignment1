@@ -1,0 +1,208 @@
+Body{Margin:0; Padding:0; background-color:#fff4dc; box-sizing: border-box;}
+
+nav ul {
+  font-size: 30px;
+  border: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;/* prevent unwanted box, clip it */
+  background-color:#ebd69f;
+}
+
+li {
+  float: left;
+  border-right: 1px solid #ffffff;
+  border-left: 1px solid #ffffff;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #824A08;
+}
+li:last-child{
+  border-right: none;
+}
+
+li :first-child{
+  border-left: none;
+}
+
+.active {
+  background-color: #824A08;
+}
+.rightnav {
+  float: right;
+}
+
+
+.dropdown{
+  display: inline-block;
+}
+
+.dropdown button{
+  font-size: 30px;
+  display:block;
+  background-color:#ebd69f;
+  padding:14px 16px;
+  color:#ffffff;
+  text-align: center;
+  border: none;
+  
+}
+
+.dropdown-content{
+  display:none;
+  position:absolute;
+  background-color: rgb(242, 204, 154);
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index : 1;
+}
+
+.dropdown-content a {
+  color:rgb(89, 89, 89);
+  padding: 12px 16px;
+  display:block;
+
+}
+
+.dropdown-content a:hover{
+  background-color:darksalmon
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown button:hover {
+  background-color: #824A08;
+}
+
+.banner-area{
+  background-image: url(images/Coffeee.jpg);
+  background-position: center center;
+  background-size: cover;
+  top: 60px;
+  height: 65vh;
+  width: 100%;
+  position:absolute;
+}
+
+.banner-area h2{
+  text-align: center left;
+  padding: 8%;
+  font-size: 50px;
+  color: black;
+}
+
+
+.wrapper{
+  width:90%;
+  margin:0 auto;
+}
+
+.content-area{
+  Width:100%;
+  height:800px;
+  position: relative;
+  top: 650px;
+  font-size:40px;
+  margin:0;
+  padding-top:30px;
+  letter-spacing: 4px;
+  text-align: center;
+}
+
+
+
+.container{
+  display: flex;
+  flex-flow: row wrap;
+  text-align: center;
+}
+
+.container *{
+  padding:10px;
+  margin: 10px;
+  flex:1 100%;
+  border-radius: 10px;
+  height:300px;
+}
+
+
+.item1{
+  background:tomato;
+}
+
+.item3{
+  text-align: left;
+  background:gray;
+}
+
+.item2{
+  background:gold
+}
+
+.item4{
+  background:pink;
+}
+
+.item2, .item3, .item4 {
+  flex-basis: 25%;
+}
+
+.item5{
+  background: rgb(255, 0, 43);
+}
+
+.footer-container{
+  background-color: rgb(255, 227, 136);
+  padding-bottom:16px;
+  flex:auto;
+}
+
+footer{
+  width:60%;
+  height:auto;
+  color:white;
+  display:flex;
+  justify-content: auto ;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  flex:1;
+}
+
+.footer-heading{
+  display: flex;
+  flex-direction: column;
+  flex:1;
+}
+
+.footer-heading h2{
+  font-size:30px;
+  margin-bottom:50px;
+}
+
+.footer-heading a{
+  font-size: 20px;
+  color:white;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+
+.footer-heading a:hover{
+  color:red
+}
+
+.footer4{
+  font-size: 50px;
+}
+
+
+
