@@ -26,7 +26,7 @@
           <li class="dropdown">
             <button>Store</button>
             <div class="dropdown-content">
-                <a href="#">Coffee</a>
+                <a href="Coffee Store.html">Coffee</a>
                 <a href="#">Tea</a>
                 <a href="#">Cake</a>
                 <a href="#">Packed Coffee</a>
@@ -39,7 +39,7 @@
       </div>
     </nav>
 
-    <section>
+    <section class = "showCart">
         <div class ="StoreContainer">
           <header>
           <div class = "StoreTitle">Coffee </div> 
@@ -50,14 +50,39 @@
             <span>0</span>
           </div>
           </header>
+
           <div class = "CoffeeProducts">
             <div class = "CProduct1">
-              <img src="images/Latte.webp" alt="">
-              <h2>Latte</h2>
-              <div class = "CoffeePrice">$10</div>
-              <button class="AddCart">Add To Cart</button>
+                <img src="images/Latte.webp" alt="">
+                <h2>Latte</h2>
+                <div class = "CoffeePrice">$10</div>
+                <button class="AddCart">Add To Cart</button>
             </div>
           </div>
+
+          <div class = "cartTab">
+            <h1>Shopping Cart</h1>
+            <div class ="cartList">
+              <div class = "CoffeeProducts">
+                <div class = "CoffeeImage">
+                  <img src = "images/Latte.webp">
+                </div>
+                <div class = "CoffeeName">NAME</div>
+                <div class = "totalPrice">$10</div>
+                
+                <div class = "quantity">
+                  <span class = "minus"><</span>
+                  <span>1</span>
+                  <span class = "plus">></span>
+              </div>
+            </div>
+
+            <div class = "cartBtn">
+              <button class = "close">CLOSE</button>
+              <button class = "checkOut">CHECK OUT</button>
+            </div>
+          </div>
+
         </div>
     </section>
   </body>

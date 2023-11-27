@@ -36,4 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
       navList.classList.toggle('show-nav');
     });
   });
-  
+
+  /************************************** SHOPPING CART******************************* */
+  let iconCart = document.querySelector('.icon-cart');
+  let body = document.querySelector("showCart");

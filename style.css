@@ -514,7 +514,7 @@ input:valid ~ label{
   
 
 .itemOne{
-  font-size: 25px;
+  font-size: 20px;
   color:rgb(255, 255, 255);
   text-shadow: 2px 2px #272323;
   text-align: top center;
@@ -523,7 +523,7 @@ input:valid ~ label{
 }
 
 .itemOne p{
-  font-size: 20px;
+  font-size: 15px;
 }
 
 .itemTwo{
@@ -549,14 +549,14 @@ input:valid ~ label{
 }
 
 .itemFour{
-  font-size: 25px;
+  font-size: 20px;
   color:rgb(255, 255, 255);
   text-shadow: 2px 2px #272323;
   background-color: #223d2b;
   flex-basis:25%;
 }
 .itemFour p{
-  font-size: 20px;
+  font-size: 15px;
 }
 
 
@@ -628,34 +628,34 @@ header .cart span{
   right: -20px;
 }
 
-.CoffeeProducts ,.CProduct1 img{
+.CoffeeProducts .CProduct1 img{
   width:90%;
   filter: drop-shadow(0 50px 20px black)
 }
 
 .CoffeeProducts{
     display: grid;
-    grid-template-columns: (4,1fr);
+    grid-template-columns: repeat(4,1fr);
     gap: 20px;
 }
 
-.CoffeeProducts, .item{
-  background-color: white;
+.CoffeeProducts .CProduct1{
+  background-color: rgb(149, 145, 145);
   padding:20px;
   border-radius: 20px;
 }
 
-.CoffeeProducts, .item h2{
+.CoffeeProducts .CProduct1 h2{
   font-weight: 500;
   font-size: large;
 }
 
-.CoffeeProducts, .item ,.CoffeePrice{
+.CoffeeProducts .CProduct1 .CoffeePrice{
   letter-spacing: 7px;
   font-size: small;
 }
 
-.CoffeeProduct, .item button{
+.CoffeeProducts .CProduct1 button{
   background-color: grey;
   color:white;
   padding:5px 10px;
@@ -663,6 +663,82 @@ header .cart span{
   margin-top:10px;
   border: none;
   cursor: pointer;
+}
+
+.cartTab{
+  width: 400px;
+  background-color: rgb(67, 59, 59);
+  color:white;
+  position: fixed;
+  top: 62px;
+  right:-400px;
+  bottom:0;
+  left:auto;
+  display:grid;
+  grid-template-rows: 70px 1fr 70px;
+}
+section.showCart .cartTab{
+  top: 62px;
+  right:0px;
+  bottom:0;
+  left:auto;
+
+}
+
+.cartTab h1{
+  padding:20px;
+  margin:0;
+  font-weight: 300;
+}
+
+.cartTab .cartBtn{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+}
+
+.cartTab .cartBtn button{
+  background-color: yellow;
+  border:none;
+  font: weight 500px;
+  cursor:pointer;
+}
+
+.cartTab .cartBtn .close{
+  background-color: white;
+}
+
+.cartTab .cartList .CoffeeProducts img{
+  width:100%;
+}
+
+.cartTab .cartList .CoffeeProducts{
+  display: grid;
+  grid-template-columns: 78px 150px 50px 1fr;
+  gap:10px;
+  text-align: center;
+  align-items: center;
+}
+
+.cartList .quantity span{
+  display:inline-block;
+  width: 25px;
+  height:25px;
+  color:gray;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.cartList .quantity span:nth-child(2){
+  background-color: transparent;
+  color: white;
+}
+
+.listCart .CoffeeProducts:nth-child(even){
+  background-color: #eee1;
+}
+
+.cartList{
+  overflow:auto;
 }
 
 
