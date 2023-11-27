@@ -1,7 +1,6 @@
 /**************************Check if Sign In/ SIgn Up Filled before redirecting*************** */
 
 document.addEventListener("DOMContentLoaded", function () {
-  // Function to validate and redirect
   function signUp() {
       var email = document.querySelector("input[type='email']").value;
       var password = document.querySelector("input[type='password']").value;
@@ -38,5 +37,15 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   /************************************** SHOPPING CART******************************* */
-  let iconCart = document.querySelector('.icon-cart');
-  let body = document.querySelector("showCart");
+  function toggleCart() {
+    let section = document.querySelector("section");
+    section.classList.toggle('showCart');/********************* Toggle On the showCart class***************** */
+}
+
+
+function toggleClose() {
+  let close = document.querySelector("section")
+  section.classList.toggle('showCart')/*********************************** Toggle Off the showCart Class***************** */
+}
+
+

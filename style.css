@@ -601,6 +601,7 @@ input:valid ~ label{
 
 svg{
   width: 30px;
+  cursor: pointer;
 }
 
 header{
@@ -682,7 +683,11 @@ section.showCart .cartTab{
   right:0px;
   bottom:0;
   left:auto;
+  transition: 0.5s;
+}
 
+body.showCart .StoreContainer{
+  transform: translateX(-250px)
 }
 
 .cartTab h1{
