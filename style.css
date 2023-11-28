@@ -569,7 +569,7 @@ input:valid ~ label{
 }
 
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
   .itemOne, .itemTwo, .itemThree, .itemFour {
     flex-basis: 50%;
   }
@@ -629,34 +629,37 @@ header .cart span{
   right: -20px;
 }
 
-.CoffeeProducts .CProduct1 img{
-  width:90%;
-  filter: drop-shadow(0 50px 20px black)
+.CoffeeProducts .CProduct img{
+  width: 90%;
+  height: 15vh;
+
+  filter: drop-shadow(0 20px 20px black)
 }
 
 .CoffeeProducts{
     display: grid;
     grid-template-columns: repeat(4,1fr);
     gap: 20px;
+    color:white;
 }
 
-.CoffeeProducts .CProduct1{
-  background-color: rgb(149, 145, 145);
+.CoffeeProducts .CProduct{
+  background-color: #4E6E58;
   padding:20px;
   border-radius: 20px;
 }
 
-.CoffeeProducts .CProduct1 h2{
+.CoffeeProducts .CProduct h2{
   font-weight: 500;
   font-size: large;
 }
 
-.CoffeeProducts .CProduct1 .CoffeePrice{
+.CoffeeProducts .CProduct .CoffeePrice{
   letter-spacing: 7px;
   font-size: small;
 }
 
-.CoffeeProducts .CProduct1 button{
+.CoffeeProducts .CProduct button{
   background-color: grey;
   color:white;
   padding:5px 10px;
@@ -684,6 +687,11 @@ section.showCart .cartTab{
   bottom:0;
   left:auto;
   transition: 0.5s;
+}
+
+.StoreTitle{
+  font-size: 50px;
+  Color:white
 }
 
 body.showCart .StoreContainer{
@@ -738,13 +746,14 @@ body.showCart .StoreContainer{
   color: white;
 }
 
-.listCart .CoffeeProducts:nth-child(even){
+.cartList .CoffeeProducts:nth-child(even){
   background-color: #eee1;
 }
 
 .cartList{
   overflow:auto;
 }
+
 
 
 

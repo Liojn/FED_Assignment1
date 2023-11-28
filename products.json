@@ -1,0 +1,57 @@
+[
+    {
+        "id": 1,
+        "name": "Latte",
+        "price": 10,
+        "image": "images/Latte.webp"
+    },
+
+    {
+        "id": 2,
+        "name": "Long Black",
+        "price": 6,
+        "image": "images/Long Black.png"
+    },
+
+    {
+        "id": 3,
+        "name": "Espresso",
+        "price": 5,
+        "image": "images/Espresso.png"
+    },
+
+    {
+        "id": 4,
+        "name": "Cappucino",
+        "price": 12,
+        "image": "images/Cappucino.png"
+    },
+
+    {
+        "id": 5,
+        "name": "Mocha",
+        "price": 15,
+        "image": "images/Mocha.png"
+    },
+
+    {
+        "id": 6,
+        "name": "Café au lait",
+        "price": 7,
+        "image": "images/Café au lait.png"
+    },
+
+    {
+        "id": 7,
+        "name": "Affogato",
+        "price": 8,
+        "image": "images/Affogato.png"
+    },
+
+    {
+        "id": 8,
+        "name": "Vietnam",
+        "price": 4,
+        "image": "images/Vietnam.png"
+    }
+]

@@ -44,8 +44,105 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 function toggleClose() {
-  let close = document.querySelector("section")
+  let section = document.querySelector("section")
   section.classList.toggle('showCart')/*********************************** Toggle Off the showCart Class***************** */
 }
 
+/******************************Initlaizing stuff**********/
 
+let cartListHTML = document.querySelector('.cartList'); /**Getting Shopping cart list */
+let listCoffeeHTML = document.querySelector('.CoffeeProducts');
+let iconCartSpan = document.querySelector('.cart span');
+let listCoffee = [];
+let cart = [];
+
+/********************************************************* */
+
+
+const addDataToHTML = () => {
+  listCoffeeHTML.innerHTML = ' ';
+  if(listCoffee.length >0){
+    listCoffee.forEach(coffee => {
+      let newCoffee = document.createElement('div')
+      newCoffee.classList.add('CProduct')
+      newCoffee.dataset.id = coffee.id
+      newCoffee.innerHTML = `
+      <img src="${coffee.image}" alt="">
+      <h2>${coffee.name}</h2>
+      <div class = "CoffeePrice">$${coffee.price}</div>
+      <button class="AddCart">Add To Cart</button>
+      `;
+      listCoffeeHTML.appendChild(newCoffee)
+    })
+  }
+}
+
+listCoffeeHTML.addEventListener('click', (event) =>{
+  let ClickPosition = event.target 
+  if(ClickPosition.classList.contains('AddCart')){//Checking if the place where user click has the class AddCart
+    let coffeeID = ClickPosition.parentElement.dataset.id;
+    addToCart(coffeeID);
+  }
+})
+
+const addToCart = (coffeeID) => {//Adding to an array to be added to the HTML later
+  let positionThisProductInCart = cart.findIndex((value => value.coffeeID == coffeeID))//Find index in the cart. If not found, will return -1
+  if(cart.length <= 0){// If current shopping cart is empty.  Add to shopping cart
+    cart = [{
+      coffeeID: coffeeID,
+      quantity: 1
+    }]
+  }else if (positionThisProductInCart <0){//If it dosent exist, add to the back of cart
+    cart.push({
+      coffeeID: coffeeID,
+      quantity: 1
+    })
+  }
+  else{// If it does exits increase quantity by 1
+    cart[positionThisProductInCart].quantity = cart[positionThisProductInCart].quantity + 1;
+  }
+  addCartToHTML();
+}
+
+
+const addCartToHTML = () => {//Adding items to the cart
+  cartListHTML.innerHTML = ''; // Clear the cart list
+  let totalQuantity = 0;// Default value for the cart red circle
+  if (cart.length > 0) {
+    cart.forEach(cartItem => {
+      totalQuantity = totalQuantity + cartItem.quantity;
+      let newCart = document.createElement('div');
+      newCart.classList.add('CoffeeProducts');
+      let positionProduct = listCoffee.findIndex((value) => value.id == cartItem.coffeeID)//Find posistion of the coffee using index to get the other information. the image, price etc
+      let info = listCoffee[positionProduct]//Saving the info into an array
+      newCart.innerHTML = `
+        <div class="CoffeeImage">
+          <img src="${info.image}">
+        </div>
+        <div class="CoffeeName">${info.name}</div>
+        <div class="totalPrice">$${info.price * cartItem.quantity}</div>
+      
+        <div class="quantity">
+          <span class="minus"><</span>
+          <span>${cartItem.quantity}</span>
+          <span class="plus">></span>
+        </div>`;
+
+      cartListHTML.appendChild(newCart);
+    });
+  }
+  iconCartSpan.innerText = totalQuantity;//updating the big red circle on the cart icon
+};
+
+
+
+const InitCart = () =>{
+  //get Data from Json
+  fetch('products.json')
+  .then(response => response.json())//Once data fetch, change data format into something JavaScript can easily understand
+  .then( data => {
+    listCoffee = data;
+    addDataToHTML();
+  })
+}
+InitCart();
