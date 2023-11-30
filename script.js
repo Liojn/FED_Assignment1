@@ -59,21 +59,21 @@ let cart = [];
 
 /********************************************************* */
 
-
+//Function to add product data to HTML
 const addDataToHTML = () => {
-  listCoffeeHTML.innerHTML = ' ';
-  if(listCoffee.length >0){
-    listCoffee.forEach(coffee => {
+  listCoffeeHTML.innerHTML = ' ';//Clear exisint data insinde the coffee product list HTML element
+  if(listCoffee.length >0){//Check if coffee products exist
+    listCoffee.forEach(coffee => {//Loop through each coffee product 
       let newCoffee = document.createElement('div')
       newCoffee.classList.add('CProduct')
-      newCoffee.dataset.id = coffee.id
+      newCoffee.dataset.id = coffee.id//To Store the coffee product ID for later use
       newCoffee.innerHTML = `
       <img src="${coffee.image}" alt="">
       <h2>${coffee.name}</h2>
       <div class = "CoffeePrice">$${coffee.price}</div>
       <button class="AddCart">Add To Cart</button>
       `;
-      listCoffeeHTML.appendChild(newCoffee)
+      listCoffeeHTML.appendChild(newCoffee)//Apeend the new product element t othe coffeee HTML 
     })
   }
 }
@@ -103,6 +103,11 @@ const addToCart = (coffeeID) => {//Adding to an array to be added to the HTML la
     cart[positionThisProductInCart].quantity = cart[positionThisProductInCart].quantity + 1;
   }
   addCartToHTML();
+  addCartToMemory();
+}
+
+const addCartToMemory = () => {
+  localStorage.setItem('cart',JSON.stringify(cart))//Change the cart into a strin format and save it into the local storage under the key cart.
 }
 
 
@@ -150,12 +155,39 @@ cartListHTML.addEventListener('click', (event) =>{
   }
 })
 
-const changeQuantity = (product_id,type) =>{
-  let positionItemInCart = cart.findIndex((value) => value.product_id)// Find position of item in the shopping cart using find index
-}
+// Function to change the quantity of a product in the shopping cart
+const changeQuantity = (product_id, type) => {
+  // Find the index of the item in the cart based on the coffeeID
+  let positionItemInCart = cart.findIndex((value) => value.coffeeID === product_id);
+
+  if (positionItemInCart >= 0) {
+    // Adjust the quantity based on the specified action (plus or minus)
+    switch (type) {
+      case 'plus':
+        // Increase quantity by 1
+        cart[positionItemInCart].quantity = cart[positionItemInCart].quantity + 1;
+        break;
+      default:
+        // If minus check if quantity is greater than 0 before minusing
+        let valueChange = cart[positionItemInCart].quantity - 1;
+        if (valueChange > 0) {
+          cart[positionItemInCart].quantity = valueChange;
+        } else {
+          // If quantity is 0 or less remove the item from the cart
+          cart.splice(positionItemInCart, 1);//Using splice and use the index of the item to remove from array
+        }
+        break;
+    }
+  }
+
+  // Update both memory and HTML representations of the shopping cart
+  addCartToMemory();
+  addCartToHTML();
+};
 
 
 
+//Function to initizalise the cart, grabbing the product data from json and showing it on html
 const InitCart = () =>{
   //get Data from Json
   fetch('products.json')

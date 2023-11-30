@@ -644,7 +644,7 @@ header .cart span{
 }
 
 .CoffeeProducts .CProduct{
-  background-color: #4E6E58;
+  background-color: #223d2b;
   padding:20px;
   border-radius: 20px;
 }
@@ -660,7 +660,7 @@ header .cart span{
 }
 
 .CoffeeProducts .CProduct button{
-  background-color: grey;
+  background-color: rgb(4, 43, 43);
   color:white;
   padding:5px 10px;
   border-radius: 20px;
@@ -671,7 +671,7 @@ header .cart span{
 
 .cartTab{
   width: 400px;
-  background-color: rgb(67, 59, 59);
+  background-color: #271300;
   color:white;
   position: fixed;
   top: 62px;
@@ -710,14 +710,14 @@ body.showCart .StoreContainer{
 }
 
 .cartTab .cartBtn button{
-  background-color: yellow;
+  background-color:#c19d67;
   border:none;
   font: weight 500px;
   cursor:pointer;
 }
 
 .cartTab .cartBtn .close{
-  background-color: white;
+  background-color: #8d7147;
 }
 
 .cartTab .cartList .CoffeeProducts img{
@@ -754,6 +754,14 @@ body.showCart .StoreContainer{
   overflow:auto;
 }
 
+
+/************************ Store ******************************/
+@media screen and (max-width: 768px) {
+  .CoffeeProducts {
+    /* Change the grid to two columns for mobile view */
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 
 
 
