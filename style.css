@@ -309,12 +309,6 @@ li :first-child{
 /****************************************** Footer *****************************/
 
 .footer-container{
-  background-color: #4E6E58;
-  padding-bottom:16px;
-  flex:auto;
-}
-
-footer{
   width:60%;
   height:auto;
   color:white;
@@ -323,6 +317,14 @@ footer{
   flex-wrap: wrap;
   margin: 0 auto;
   flex:1;
+}
+
+footer{
+
+
+  background-color: #4E6E58;
+  padding-bottom:16px;
+  flex:auto;
 }
 
 .footer-heading{
@@ -514,7 +516,7 @@ input:valid ~ label{
   
 
 .itemOne{
-  font-size: 20px;
+  font-size: 15px;
   color:rgb(255, 255, 255);
   text-shadow: 2px 2px #272323;
   text-align: top center;
@@ -522,9 +524,6 @@ input:valid ~ label{
   flex-basis: 25%;
 }
 
-.itemOne p{
-  font-size: 15px;
-}
 
 .itemTwo{
   font-size: 40px;
@@ -549,7 +548,7 @@ input:valid ~ label{
 }
 
 .itemFour{
-  font-size: 20px;
+  font-size: 15px;
   color:rgb(255, 255, 255);
   text-shadow: 2px 2px #272323;
   background-color: #223d2b;
