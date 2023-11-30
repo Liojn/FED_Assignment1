@@ -48,6 +48,7 @@ function toggleClose() {
   section.classList.toggle('showCart')/*********************************** Toggle Off the showCart Class***************** */
 }
 
+
 /******************************Initlaizing stuff**********/
 
 let cartListHTML = document.querySelector('.cartList'); /**Getting Shopping cart list */
@@ -113,6 +114,7 @@ const addCartToHTML = () => {//Adding items to the cart
       totalQuantity = totalQuantity + cartItem.quantity;
       let newCart = document.createElement('div');
       newCart.classList.add('CoffeeProducts');
+      newCart.dataset.id = cartItem.coffeeID
       let positionProduct = listCoffee.findIndex((value) => value.id == cartItem.coffeeID)//Find posistion of the coffee using index to get the other information. the image, price etc
       let info = listCoffee[positionProduct]//Saving the info into an array
       newCart.innerHTML = `
@@ -133,6 +135,24 @@ const addCartToHTML = () => {//Adding items to the cart
   }
   iconCartSpan.innerText = totalQuantity;//updating the big red circle on the cart icon
 };
+
+
+cartListHTML.addEventListener('click', (event) =>{
+  let positionClick = event.target;
+  if (positionClick.classList.contains('minus') || positionClick.classList.contains('plus') ){
+    let product_id = positionClick.parentElement.parentElement.dataset.id;//Since the data is covered in 2 layers, have to call parent element twice
+    let type = 'minus';
+    if (positionClick.classList.contains('plus')){
+      type = 'plus';
+      changeQuantity(product_id,type)
+    }
+
+  }
+})
+
+const changeQuantity = (product_id,type) =>{
+  let positionItemInCart = cart.findIndex((value) => value.product_id)// Find position of item in the shopping cart using find index
+}
 
 
 
