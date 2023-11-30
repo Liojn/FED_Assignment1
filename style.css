@@ -313,7 +313,6 @@ li :first-child{
   height:auto;
   color:white;
   display:flex;
-  justify-content: auto ;
   flex-wrap: wrap;
   margin: 0 auto;
   flex:1;
@@ -519,7 +518,6 @@ input:valid ~ label{
   font-size: 15px;
   color:rgb(255, 255, 255);
   text-shadow: 2px 2px #272323;
-  text-align: top center;
   background-color: #223d2b;
   flex-basis: 25%;
 }
@@ -711,7 +709,6 @@ body.showCart .StoreContainer{
 .cartTab .cartBtn button{
   background-color:#c19d67;
   border:none;
-  font: weight 500px;
   cursor:pointer;
 }
 
