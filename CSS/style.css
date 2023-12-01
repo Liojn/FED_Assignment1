@@ -255,7 +255,7 @@ li :first-child{
   font-size: 40px;
   color:rgb(255, 255, 255);
   text-shadow: 2px 2px #272323;
-  background:url("/images/GiftCard.jpg");
+  background:url("../images/GiftCard.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
