@@ -193,7 +193,7 @@ const changeQuantity = (product_id, type) => {
 //Function to initizalise the cart, grabbing the product data from json and showing it on html
 const InitCart = () =>{
   //get Data from Json
-  fetch('products.json')
+  fetch('json/products.json')
   .then(response => response.json())//Once data fetch, change data format into something JavaScript can easily understand
   .then( data => {
     listCoffee = data;
