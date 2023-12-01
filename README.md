@@ -7,7 +7,7 @@ Project Name: CofTea
 Introducing CofTea, a delightful haven for coffee and tea enthusiasts that transcends the ordinary. At CofTea, we curate an unparalleled experience where the rich aroma of freshly brewed coffee blends seamlessly with the soothing notes of fine tea. Our passion for exceptional beverages extends to an array of delectable cakes that perfectly complement our signature brews, creating a symphony of flavors that indulge the senses.
 
 Beyond the cup, CofTea offers a unique touch with our premium coffee powders, ensuring that the essence of our exquisite brews can be savored in the comfort of your own home. With a commitment to quality, innovation, and the pure joy of sipping and savoring, CofTea invites you to embark on a journey where every moment is a celebration of the finest flavors, handpicked for your enjoyment. Elevate your coffee and tea experience with CofTea – where passion meets perfection.
-
+---------------------------------------------------------------------------------------------------------------------------------------
 
 
 Design Process:
@@ -19,3 +19,10 @@ User Stories:
 - As a friend of a coffee and tea lover, I want to be able to gift my friend a present that he will use, so that I won't feel like my gift will be wasted.
 - As a homebrewer, I want to have access to preimum coffee powder, so that I can enjoy my favourite coffee at home.
 - As a middle class worker, I want easy and affordable access to coffee in the morning, so I can prepare for my work day.
+----------------------------------------------------------------------------------------------------------------------------------------
+
+
+Features:
+- Feature 1: Sign In Form, allows user to fill up a form in order to sign in.
+- Feature 2: Sign Up Form, allows user to fill up a form in order to register an account.
+- Feature 3:

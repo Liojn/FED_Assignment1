@@ -150,12 +150,13 @@ cartListHTML.addEventListener('click', (event) =>{
     if (positionClick.classList.contains('plus')){
       type = 'plus';
       changeQuantity(product_id,type)
+    }else{
+      changeQuantity(product_id,type)
     }
 
   }
 })
 
-// Function to change the quantity of a product in the shopping cart
 const changeQuantity = (product_id, type) => {
   // Find the index of the item in the cart based on the coffeeID
   let positionItemInCart = cart.findIndex((value) => value.coffeeID === product_id);
@@ -167,15 +168,16 @@ const changeQuantity = (product_id, type) => {
         // Increase quantity by 1
         cart[positionItemInCart].quantity = cart[positionItemInCart].quantity + 1;
         break;
-      default:
-        // If minus check if quantity is greater than 0 before minusing
-        let valueChange = cart[positionItemInCart].quantity - 1;
-        if (valueChange > 0) {
-          cart[positionItemInCart].quantity = valueChange;
+      case 'minus':
+        // If minus, check if quantity is greater than 1 before decreasing
+        if (cart[positionItemInCart].quantity > 1) {
+          cart[positionItemInCart].quantity = cart[positionItemInCart].quantity - 1;
         } else {
-          // If quantity is 0 or less remove the item from the cart
-          cart.splice(positionItemInCart, 1);//Using splice and use the index of the item to remove from array
+          // If quantity is 1 or less, remove the item from the cart
+          cart.splice(positionItemInCart, 1);
         }
+        break;
+      default:
         break;
     }
   }
@@ -184,6 +186,7 @@ const changeQuantity = (product_id, type) => {
   addCartToMemory();
   addCartToHTML();
 };
+
 
 
 
